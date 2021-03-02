@@ -13,13 +13,11 @@ startbutton.onclick = () =>{
         }
         let str = "<h3>ま゛";
         for(let i = 2; i <= test + 1; i++){
-            str += "ぅ゛"
-            if(i % 50 == 0)str += '<br>';
+            str += "ぅ゛";
         }
         str += '<br>';
         for(let i = 1; i <= (test + 1 )/ 2; i++){
             str += "♡゛";
-            if(i % 50 == 0)str += '<br>';
         }
         return str + "</h3>";
     }
