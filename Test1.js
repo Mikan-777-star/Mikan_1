@@ -4,11 +4,11 @@ startbutton.onclick = () =>{
     function test(s){
         let test = 0;
         switch (s) {
-            case 'S':test = 100;
+            case 'S':test = 50;
                 break;
-            case 'M':test = 500;
+            case 'M':test = 100;
                 break;
-            default:test = 1000;
+            default:test = 200;
                 break;
         }
         let str = "<h3>ま゛";
