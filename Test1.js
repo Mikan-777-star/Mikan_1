@@ -4,22 +4,22 @@ startbutton.onclick = () =>{
     function test(s){
         let test = 0;
         switch (s) {
-            case 'S':test = 100;
+            case 'S':test = 50;
                 break;
-            case 'M':test = 500;
+            case 'M':test = 100;
                 break;
-            default:test = 1000;
+            default:test = 200;
                 break;
         }
         let str = "<h3>ま゛";
         for(let i = 2; i <= test + 1; i++){
             str += "ぅ゛";
-            if(i % 15 == 0)str += '<br>';
+            if(i % 25 == 0)str += '<br>';
         }
         str += '<br>';
         for(let i = 1; i <= test + 1 / 2; i++){
             str += "♡゛";
-            if(i % 15 == 0)str += '<br>';
+            if(i % 25 == 0)str += '<br>';
         }
         return str + "</h3>";
     }
