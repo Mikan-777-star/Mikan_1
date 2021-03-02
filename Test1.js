@@ -1,4 +1,5 @@
 'use strict'
+//フェノさんがいつもみたいに戻ってきますように…
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
     function test(s){
