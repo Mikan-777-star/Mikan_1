@@ -1,5 +1,6 @@
 'use strict'
 //フェノさんがいつもみたいに戻ってきますように…
+//場バエルってなんぞや
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
     function test(s){
