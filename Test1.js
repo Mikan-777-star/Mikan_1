@@ -13,7 +13,7 @@ startbutton.onclick = () =>{
         }
         let str = "<h3>ま゛";
         for(let i = 2; i <= test + 1; i++){
-            str += "ぅ゛"
+            str += "ぅ゛";
             if(i % 15 == 0)str += '<br>';
         }
         str += '<br>';
