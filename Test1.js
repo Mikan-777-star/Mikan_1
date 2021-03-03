@@ -5,7 +5,7 @@
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
     function test(s){
-        if(s === 56562||s === 26980 ){
+        if(s == 56562||s == 26980 ){
             return '<a href ="https://twitter.com/hekisaki_umau/status/1366977824075042826">隠しコマンドを入力したね！</a>';
         }
         let test = s;
