@@ -1,0 +1,19 @@
+body{
+    background-color: #9999;
+}
+#Test1{
+    text-align: center;
+}
+main{
+    font-family: sans-serif;
+    background-color: #ffff;
+    margin: 0px auto;
+    height: 10000px auto;
+    width: 1000px;
+}
+#feno{
+    color: red;
+}
+#umau{
+    color: blue;
+}
