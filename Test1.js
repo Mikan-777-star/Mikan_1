@@ -13,11 +13,16 @@ function test1(){
     }
     return false;
 }
+var s = null;
 if(test1()){
+    s = '<img src="Feno.jpg">うまうさんの鳴き声製造機<img src="Umau.jpg">';
     var main = document.getElementById('main');
     main.style.width = 'auto';
     main.style.fontSize = '50%';
+}else{
+    s = '<img src="Feno_1.jpg">うまうさんの鳴き声製造機<img src="Umau_1.jpg">';
 }
+document.getElementById("dai").innerHTML = s;
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
     function test(s){
