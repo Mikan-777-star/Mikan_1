@@ -8,7 +8,7 @@ function test1(){
     var androidT = ua.indexOf('Android');
     return iphone || androidSp || ipad|| androidT;
 }
-if(test1()){
+if(!test1()){
     var main = document.getElementById('main');
     main.style.width = '100%';
 }
