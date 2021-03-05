@@ -1,7 +1,17 @@
 'use strict'
-//フェノさんがいつもみたいに戻ってきますように…
-//みなさん心配してるんだぞー
-//ばばばばばバエル！
+function test1(){
+    var ua = navigator.userAgent;
+    console.log(ua);
+    var iphone = ua.indexOf('iPhone') > 0;
+    var androidSp = ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;
+    var ipad = ua.indexOf('iPad');
+    var androidT = ua.indexOf('Android');
+    return iphone || androidSp || ipad|| androidT;
+}
+if(test1()){
+    var main = document.getElementById('main');
+    main.style.width = '100%';
+}
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
     function test(s){
