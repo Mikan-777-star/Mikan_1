@@ -1,4 +1,5 @@
 'use strict'
+const startbutton = document.getElementById("start");
 function test1(){
     var ua = navigator.userAgent;
     console.log(ua);
@@ -14,16 +15,19 @@ function test1(){
     return false;
 }
 var s = null;
+var s1 = null;
 if(test1()){
     s = '<img src="Feno.jpg">うまうさんの鳴き声製造機<img src="Umau.jpg">';
+    s1 = 'このボタンを押してね';
     var main = document.getElementById('main');
     main.style.width = 'auto';
     main.style.fontSize = '50%';
 }else{
     s = '<img src="Feno_1.jpg">うまうさんの鳴き声製造機<img src="Umau_1.jpg">';
+    s1 = 'このボタンをクリックしてね';
 }
 document.getElementById("dai").innerHTML = s;
-const startbutton = document.getElementById("start");
+startbutton.innerHTML = s1
 startbutton.onclick = () =>{
     function test(s){
         if(s == 56562||s == 26980 ){
