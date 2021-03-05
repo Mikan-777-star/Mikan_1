@@ -2,15 +2,21 @@
 function test1(){
     var ua = navigator.userAgent;
     console.log(ua);
-    var iphone = ua.indexOf('iPhone') > 0;
-    var androidSp = ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;
-    var ipad = ua.indexOf('iPad');
-    var androidT = ua.indexOf('Android');
-    return iphone || androidSp || ipad|| androidT;
+    if(ua.indexOf('iPhone') > -1){
+        return true;
+    }
+    if(ua.indexOf('Android') > -1){
+        return true;
+    }
+    if(ua.indexOf('iPad') > -1){
+        return true;
+    }
+    return false;
 }
-if(!test1()){
+if(test1()){
     var main = document.getElementById('main');
-    main.style.width = '100%';
+    main.style.width = 'auto';
+    main.style.fontSize = '50%';
 }
 const startbutton = document.getElementById("start");
 startbutton.onclick = () =>{
