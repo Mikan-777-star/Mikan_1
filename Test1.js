@@ -1,4 +1,5 @@
 'use strict'
+if(new Date().getDay() === 3)document.getElementById('suika').innerHTML = '今日は誰何すいすい水曜日';
 const startbutton = document.getElementById("start");
 function test1(){
     var ua = navigator.userAgent;
