@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェノさんが抜くだけ</title>
+    <link rel="stylesheet" href="Test1.css">
+<body>
+    <main>
+        <img src="jpg/Feno_1.jpg"><br>
+        <h1>フェノさんが抜くだけ</h1>
+        <button id = "start">おしてね</button>
+        <h3>
+            <div id = "t1"></div>
+            <div id = "t2"></div>
+        </h3>
+    </main>
+    <script>
+        function test1(){
+            var ua = navigator.userAgent;
+            console.log(ua);
+            if(ua.indexOf('iPhone') > -1){
+                return true;
+            }
+            if(ua.indexOf('Android') > -1){
+                return true;
+            }
+            if(ua.indexOf('iPad') > -1){
+                return true;
+            }
+            return false;
+        }
+        if(test1()){
+            var main = document.getElementById('main');
+            main.style.fontSize = '50%';
+            main.style.width = 'auto';
+        }
+    </script>
+    <script src="Test3.js"></script>
+</body>
+</html>
