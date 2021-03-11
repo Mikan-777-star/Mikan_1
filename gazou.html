@@ -23,5 +23,26 @@
         <img src="konatu.jpg">
     </main>
     <script src="Test2.js"></script>
+    <script>
+        function test1(){
+            var ua = navigator.userAgent;
+            console.log(ua);
+            if(ua.indexOf('iPhone') > -1){
+                return true;
+            }
+            if(ua.indexOf('Android') > -1){
+                return true;
+            }
+            if(ua.indexOf('iPad') > -1){
+                return true;
+            }
+            return false;
+        }
+        if(test1()){
+            var main = document.getElementById('main');
+            main.style.fontSize = '50%';
+            main.style.width = 'auto';
+        }
+    </script>
 </body>
 </html>
