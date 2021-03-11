@@ -1,4 +1,10 @@
 'use strict';
+var str = '抜きました<br>';
+for(let i = 0; i < 5; i++){
+  str += '<br>';
+}
+str += '<img class = "ALL" src = "jpg/TE_KYO.jpeg">';
+
 var wait = function(sec) {
     return function() {
       return new Promise(function(resolve/*, reject*/) {
@@ -19,7 +25,8 @@ var wait = function(sec) {
             })
             .then(wait(sec)) // ここで処理を待たせる
             .then(function() {
-                document.getElementById('t2').innerHTML = '抜きました'
+               
+                document.getElementById('t2').innerHTML = str;
             })
             .catch(function (err) {
               console.error(err);
