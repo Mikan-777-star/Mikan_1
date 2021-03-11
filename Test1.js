@@ -19,20 +19,21 @@ var s1 = null;
 var feno = document.getElementById('Feno');
 var umau = document.getElementById('Umau');
 if(test1()){
-    feno.innerHTML = '<img src="Feno.jpg">';
-    umau.innerHTML = '<img src="Umau.jpg">';
+    feno.innerHTML = '<img src="jpg/Feno.jpg">';
+    umau.innerHTML = '<img src="jpg/Umau.jpg">';
     s1 = 'このボタンを押してね';
     var main = document.getElementById('main');
     main.style.width = 'auto';
     main.style.fontSize = '50%';
 }else{
-    feno.innerHTML = '<img src="Feno_1.jpg">';
-    umau.innerHTML = '<img src="Umau_1.jpg">';
+    feno.innerHTML = '<img src="jpg/Feno_1.jpg">';
+    umau.innerHTML = '<img src="jpg/Umau_1.jpg">';
     s1 = 'このボタンをクリックしてね';
 }
 startbutton.innerHTML = s1
 startbutton.onclick = () =>{
     function test(s){
+
         let test = s;
         let str = "<h3>ま゛";
         for(let i = 2; i <= test - 3; i++){
