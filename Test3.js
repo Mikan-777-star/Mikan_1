@@ -5,6 +5,13 @@ for(let i = 0; i < 5; i++){
 }
 str += '<img class = "ALL" src = "jpg/TE_KYO.jpeg">';
 
+var audioElem;
+function PlaySound(i) {
+    audioElem = new Audio();
+    audioElem.src = i;
+    audioElem.play();
+}
+
 var wait = function(sec) {
     return function() {
       return new Promise(function(resolve/*, reject*/) {
@@ -24,12 +31,13 @@ var wait = function(sec) {
         }
           Promise.resolve()
             .then(() => {
+                PlaySound('nukimasu.wav');
                 document.getElementById('t1').innerHTML = '抜きます<br>'
                 return Promise.resolve();
             })
             .then(wait(sec)) // ここで処理を待たせる
             .then(function() {
-               
+                PlaySound('nuita.wav');
                 document.getElementById('t2').innerHTML = str;
             })
             .catch(function (err) {
