@@ -15,7 +15,7 @@ main{
 #umau{
     color: blue;
 }
-#ALL{
+.ALL{
     float: none;
     width: 50%;
 }
