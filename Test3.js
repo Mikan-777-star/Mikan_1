@@ -1,5 +1,5 @@
 'use strict';
-var str = '抜きました<br>';
+var str = '抜いた<br>';
 for(let i = 0; i < 5; i++){
   str += '<br>';
 }
