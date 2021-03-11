@@ -33,7 +33,9 @@ if(test1()){
 startbutton.innerHTML = s1
 startbutton.onclick = () =>{
     function test(s){
-
+        if(s === 'まちカドまぞく'){
+            return '<a href = "gazou.html">スペシャルサンクス</a>'
+        }
         let test = s;
         let str = "<h3>ま゛";
         for(let i = 2; i <= test - 3; i++){
