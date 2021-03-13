@@ -47,7 +47,7 @@ startbutton.onclick = () =>{
         return str + "</h3>";
     }
     document.getElementById('ans').innerHTML = test(window.prompt('ボタンを押したな！さあ長さを数字で書け！'));
-    var s = '<h6>おまけのきららシャミ桃</h6><img src="monmo26980.jpg"><img src="Syamiko.jpg">';
+    var s = '<h6>おまけのきららシャミ桃</h6><img class = "ALL" src="monmo26980.jpg"><img class = "ALL" src="Syamiko.jpg">';
     s += '<br>made by <a href = "https://twitter.com/mikan26980" id = "umau">大彗星みかん</a>';
     document.getElementById('26980').innerHTML = s;
 }
