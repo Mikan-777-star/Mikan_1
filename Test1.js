@@ -41,7 +41,20 @@ const tweetDivided = document.getElementById('twitter');
 startbutton.onclick = () =>{
     function test(s){
         if(s === 'まちカドまぞく'){
-            return '<a href = "gazou.html">スペシャルサンクス</a>'
+            return {
+                result:'<a href = "gazou.html">スペシャルサンクス</a>',
+                ans: false
+            }
+        }else if(s === 'パインアメマン'){
+            return{
+                result: '<img class = "ALL" src = "https://pbs.twimg.com/media/Es0UZcjU0AIUCtH?format=jpg&name=900x900">',
+                ans: false
+            }
+        }else if(s === 'めるす'){
+            return{
+                result: '<a href = "test2.jpg">押せ</a>',
+                ans: false
+            }
         }
         let test = s;
         let str = "ま゛";
@@ -52,27 +65,32 @@ startbutton.onclick = () =>{
             str += "♡゛";
         }
 
-        return str ;
+        return {
+            result: str,
+            ans: true
+        };
     }
     var str = test(window.prompt('ボタンを押したな！さあ長さを数字で書け！'));
     removeAllChildren(tweetDivided);
-    document.getElementById('ans').innerHTML = str;
+    document.getElementById('ans').innerHTML = str.result;
     var s = '<h6>おまけのきららシャミ桃</h6><img class = "ALL" src="monmo26980.jpg"><img class = "ALL" src="Syamiko.jpg">';
     s += '<br>made by <a href = "https://twitter.com/mikan26980" id = "umau">大彗星みかん</a>';
     document.getElementById('26980').innerHTML = s;
-    const anchor = document.createElement('a');
-    const hrefValue =
-      'https://twitter.com/intent/tweet?button_hashtag=' +
-      encodeURIComponent('ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛') +
-      '&ref_src=twsrc%5Etfw';
-    anchor.setAttribute('href', hrefValue);
-    anchor.className = 'twitter-hashtag-button';
-    anchor.setAttribute('data-text', str);
-    anchor.innerText = 'Tweet #ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛';
-    tweetDivided.appendChild(anchor);
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-    tweetDivided.appendChild(script);
+    if(str.ans){
+        const anchor = document.createElement('a');
+        const hrefValue =
+          'https://twitter.com/intent/tweet?button_hashtag=' +
+          encodeURIComponent('ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛') +
+          '&ref_src=twsrc%5Etfw';
+        anchor.setAttribute('href', hrefValue);
+        anchor.className = 'twitter-hashtag-button';
+        anchor.setAttribute('data-text', str.result);
+        anchor.innerText = 'Tweet #ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛';
+        tweetDivided.appendChild(anchor);
+        const script = document.createElement('script');
+        script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+        tweetDivided.appendChild(script);
+    }
 }
 
 
