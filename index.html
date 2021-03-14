@@ -11,13 +11,7 @@
     <script type="text/javascript">
         var audioElem;
     
-        function PlaySound(i) {
-            var s;
-            if(i === 0){
-                s = 'mau_F.mp3';
-            }else{
-                s = 'mau_U.mp3';
-            }
+        function PlaySound(s) {
             audioElem = new Audio();
             audioElem.src = s;
             audioElem.play();
@@ -25,7 +19,7 @@
     </script>
     <main id = "main">
         <div id = "Test1">
-            <h1 ><a id = "Feno" href="javascript:void(0);" onclick="PlaySound(0);"></a>うまうさんの鳴き声製造機<a id ="Umau" href="javascript:void(0);" onclick="PlaySound(1);"></a></h1>
+            <h1 ><a id = "Feno" href="javascript:void(0);" onclick="PlaySound('mau_F.mp3');"></a>うまうさんの鳴き声製造機<a id ="Umau" href="javascript:void(0);" onclick="PlaySound('mau_U.mp3');"></a></h1>
             <h3 id = "suika"></h3>
            <!--
                誰かの誕生日を祝うための何か
