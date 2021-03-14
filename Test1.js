@@ -1,6 +1,12 @@
 'use strict'
 if(new Date().getDay() === 3)document.getElementById('suika').innerHTML = '今日は誰何すいすい水曜日';
 const startbutton = document.getElementById("start");
+function removeAllChildren(element) {
+    while (element.firstChild) {
+      // 子どもの要素があるかぎり除去
+      element.removeChild(element.firstChild);
+    }
+  }
 function test1(){
     var ua = navigator.userAgent;
     console.log(ua);
@@ -31,23 +37,48 @@ if(test1()){
     s1 = 'このボタンをクリックしてね';
 }
 startbutton.innerHTML = s1
+const tweetDivided = document.getElementById('twitter');
 startbutton.onclick = () =>{
     function test(s){
         if(s === 'まちカドまぞく'){
             return '<a href = "gazou.html">スペシャルサンクス</a>'
         }
         let test = s;
-        let str = "<h3>ま゛";
-        for(let i = 2; i <= test - 3; i++){
+        let str = "ま゛";
+        for(let i = 2; i <= (test - 10); i++){
             str += "ぅ゛";
         }
-        for(let i = 1; i <= (test - 5 )/ 2; i++){
+        for(let i = 1; i <= (test - 15 )/ 2; i++){
             str += "♡゛";
         }
-        return str + "</h3>";
+
+        return str ;
     }
-    document.getElementById('ans').innerHTML = test(window.prompt('ボタンを押したな！さあ長さを数字で書け！'));
+    var str = test(window.prompt('ボタンを押したな！さあ長さを数字で書け！'));
+    removeAllChildren(tweetDivided);
+    document.getElementById('ans').innerHTML = str;
     var s = '<h6>おまけのきららシャミ桃</h6><img class = "ALL" src="monmo26980.jpg"><img class = "ALL" src="Syamiko.jpg">';
     s += '<br>made by <a href = "https://twitter.com/mikan26980" id = "umau">大彗星みかん</a>';
     document.getElementById('26980').innerHTML = s;
+    const anchor = document.createElement('a');
+    const hrefValue =
+      'https://twitter.com/intent/tweet?button_hashtag=' +
+      encodeURIComponent('ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛') +
+      '&ref_src=twsrc%5Etfw';
+    anchor.setAttribute('href', hrefValue);
+    anchor.className = 'twitter-hashtag-button';
+    anchor.setAttribute('data-text', str);
+    anchor.innerText = 'Tweet #ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛';
+    tweetDivided.appendChild(anchor);
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    tweetDivided.appendChild(script);
 }
+
+
+/**
+ * <div>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-text="マウマウの反乱" data-show-count="false">Tweet #ま゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+ */
