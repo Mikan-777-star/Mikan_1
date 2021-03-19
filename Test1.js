@@ -55,6 +55,11 @@ startbutton.onclick = () =>{
                 result: '<a href = "test2.jpg">押せ</a>',
                 ans: false
             }
+        }else if(s === "舞風"){
+            return{
+                result: '<a href = "javascript:void(0)" onclick="PlaySound(\'Maikaze.mp3\', true);">舞風さんの寝息だわよ</a>',
+                ans: false
+            }
         }
         let test = s;
         let str = "ま゛";
