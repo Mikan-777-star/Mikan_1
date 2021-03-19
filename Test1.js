@@ -1,5 +1,25 @@
 'use strict'
-if(new Date().getDay() === 3)document.getElementById('suika').innerHTML = '今日は誰何すいすい水曜日';
+function days(){
+    var days = new Date().getDay();
+    var suika = document.getElementById('suika');
+    switch(days){
+        case 1:suika.innerHTML = '陽夏木つきつき月曜日';
+        break;
+        case 2: suika.innerHTML = "千代田ちょだちょだTuesday";
+        break;
+        case 3: suika.innerHTML = '今日は誰何すいすい水曜日';
+        break;
+        case 4: suika.innerHTML = "もんも悶々木曜日";
+        break;
+        case 5: suika.innerHTML = 'ごせんぞ金ピカ金曜日！';
+        break;
+        case 6: suika.innerHTML = 'サタデーさたさた佐田杏里';
+        break;
+        case 7: suika.innerHTML = "リリスさんさんSunday";
+    }
+    
+}
+days();
 const startbutton = document.getElementById("start");
 function removeAllChildren(element) {
     while (element.firstChild) {
