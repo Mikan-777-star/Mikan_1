@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        var wait = function(sec) {
+            return () => {
+              return new Promise(function(resolve/*, reject*/) {
+                setTimeout(resolve, sec*1000)
+              });
+            }
+        };
+        function start(){
+            var starts = (s, vm) =>{
+                var audio = new Audio();
+                audio.src = s;
+                audio.volume = vm;
+                audio.play();
+                audio.loop = true;
+            }
+            Promise.resolve()
+                .then(starts("mau_F.mp3", 0.5))
+                .then(wait(8)) // ここで処理を待たせる
+                .then(starts("mau_U.mp3", 1))
+                .catch(function (err) {
+                  console.error(err);
+                  self.result_message = error;
+                });
+  
+        }
+    </script>
+    <a href="javascript:void(0)" onclick="start()">start</a>
+</body>
+</html>
